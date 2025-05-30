@@ -1,0 +1,13 @@
+<?php
+
+namespace Domain\exception;
+
+class PasswordIncorrectException extends \RuntimeException
+{
+
+    public function __construct(string $message)
+    {
+        parent::__construct($message);
+    }
+
+}

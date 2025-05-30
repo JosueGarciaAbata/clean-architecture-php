@@ -1,0 +1,30 @@
+{
+    "version": "1.0.0",
+    "name": "hpvictus/clean_architecture_php",
+    "autoload": {
+        "psr-4": {
+            "Domain\\": "src/com/clean/app/domain/",
+            "Application\\": "src/com/clean/app/application/",
+            "Infrastructure\\": "src/com/clean/app/infrastructure/"
+
+        }
+    },
+    "authors": [
+        {
+            "name": "Josue Joel Garcia Abata",
+            "email": "josuegarcab2@hotmail.com"
+        }
+    ],
+    "require": {
+        "php-di/php-di": "^7.0",
+        "doctrine/orm": "^3.3",
+        "rekalogika/mapper": "^2.0",
+        "firebase/php-jwt": "^6.11",
+        "paragonie/sodium_compat": "^2.1",
+        "psr/http-message": "*",
+        "slim/slim": "4.*",
+        "slim/psr7": "*",
+        "php-di/slim-bridge": "*",
+        "ramsey/uuid-doctrine": "^2.1"
+    }
+}

@@ -1,0 +1,32 @@
+# Directorios de dependencias
+/vendor/
+
+# Entornos y variables locales
+/.env
+/.env.local
+
+# Archivos de IDEs
+/.idea/
+/.vscode/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs y cachés
+/log/
+/cache/
+/tmp/
+
+# Archivos de PHPUnit o cobertura
+/phpunit.xml
+/coverage/
+
+# Builds y artefactos
+/build/
+/dist/
+
+# Node (si usas frontend)
+/node_modules/
+/npm-debug.log
+/yarn-error.log
