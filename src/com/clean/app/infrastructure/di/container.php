@@ -20,16 +20,18 @@ use Doctrine\DBAL\DriverManager;
 use Infrastructure\security\JwtService;
 use function DI\autowire;
 use function DI\factory;
+use Dotenv\Dotenv;
 
 $paths = [__DIR__ . '/../adapters/out'];
 $isDev = true;
+
 $dbParams = [
-    'driver'   => 'pdo_pgsql',
-    'user'     => 'postgres',
-    'password' => 'root',
-    'dbname'   => 'mystore',
-    'host'     => 'localhost',
-    'port'     => 5432,
+    'driver'   => $_ENV['DB_DRIVER'],
+    'user'     => $_ENV['DB_USER'],
+    'password' => $_ENV['DB_PASS'],
+    'dbname'   => $_ENV['DB_NAME'],
+    'host'     => $_ENV['DB_HOST'],
+    'port'     => $_ENV['DB_PORT'],
 ];
 
 return (new ContainerBuilder())

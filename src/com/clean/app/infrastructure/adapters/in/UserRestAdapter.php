@@ -41,7 +41,11 @@ class UserRestAdapter
             $dtos
         );
 
-        $response->getBody()->write(json_encode($payload));
+        $final = [
+            "users" => $payload,
+        ];
+
+        $response->getBody()->write(json_encode($final));
         return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
     }
 
@@ -54,8 +58,9 @@ class UserRestAdapter
         $token = $this->jwtService->generate($loggedInUser);
 
         $payload = [
-            'id'    => $loggedInUser->getId(),
-            'email' => $loggedInUser->getEmail(),
+            "user" => ["id" => $loggedInUser->getId(),
+                        "name" => $loggedInUser->getName(),
+                       "email" => $loggedInUser->getEmail()],
             'token' => $token,
         ];
 
@@ -75,9 +80,11 @@ class UserRestAdapter
         $token = $this->jwtService->generate($saved);
 
         $payload = [
-            'id' => $saved->getId(),
-            'name' => $saved->getName(),
-            'email' => $saved->getEmail(),
+            "user" => [
+                'id' => $saved->getId(),
+                'name' => $saved->getName(),
+                'email' => $saved->getEmail(),
+            ],
             "token" => $token
         ];
 
