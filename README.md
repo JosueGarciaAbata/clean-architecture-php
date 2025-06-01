@@ -4,7 +4,8 @@ Practice with clean architecture (hexagonal) to gain a stronger foundation in co
 
 This PHP project uses Composer to manage its packages. Run: composer install
 
-**Database:** PostgreSQL
+**Database:** PostgreSQL.
+
 **Configuration:** Environment variables are loaded from `.env` using `vlucas/phpdotenv`.
 
 | Packages               | Version | Description                                                                                                       |
